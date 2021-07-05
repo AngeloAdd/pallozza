@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #dc5a2e, #ae5be2);
+}
+
+.flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.ground{
+    background-color: brown;
+    height: 20vh;
+    width: 100%;
+}
+
+.animation{
+    position: absolute;
+    animation: move 10s linear infinite;
+}
+
+.ball{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background-color: #f5c053;
+    position: relative;
+    z-index: 1;
+}
+
+.right-eye{
+    border-radius: 50%;
+    width: .8rem;
+    height: .8rem;
+    background-color:black;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+}
+.left-eye{
+    border-radius: 50%;
+    width: .8rem;
+    height: .8rem;
+    background-color:black;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+}
+
+.legs{
+    position: relative;
+}
+
+.right-leg{
+    position: absolute;
+    top: -3rem;
+    right: 4rem;
+    animation: moveLegUp 1s linear infinite; 
+}
+
+.left-leg{
+    position: absolute;
+    top: -3rem;
+    left: 4rem;
+    animation: moveLegUp 1s linear infinite 1s;
+}
+
+.upper-right{
+    background-color: black;
+    height: 8rem;
+    width: .2rem;
+}
+
+.down-right{
+    background-color: black;
+    height: 8rem;
+    width: .2rem;
+}
+
+.upper-left{
+    background-color: black;
+    height: 8rem;
+    width: .2rem;
+}
+
+.down-left{
+    background-color: black;
+    height: 8rem;
+    width: .2rem;
+}
+
+@keyframes move{
+    from{
+        left: -10%;
+    } to{
+        left: 100%;
+    }
+}
+
+@keyframes moveLegUp {
+    from{
+        transform-origin: top;
+        top: -3rem;
+        transform: rotate(-15deg);
+    } to {
+        transform-origin: top;
+        top: -3rem;
+        transform: rotate(30deg);
+    }
+}
