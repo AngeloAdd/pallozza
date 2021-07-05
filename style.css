@@ -65,7 +65,7 @@ body{
     position: absolute;
     top: -3rem;
     left: 4rem;
-    animation: moveLegUp 1s linear infinite 1s;
+    animation: moveLegUp 1s linear infinite 0.8s;
 }
 
 .upper-right{
